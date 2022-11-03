@@ -1,12 +1,16 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import FloatingMusicPlayer from './src/components/FloatingMusicPlayer';
+import MainTabNavigator from './src/navigators/MainTabNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StatusBar style="light" />
+      <MainTabNavigator />
+      <FloatingMusicPlayer />
+    </NavigationContainer>
   );
 }
 
